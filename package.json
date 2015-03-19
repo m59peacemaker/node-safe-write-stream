@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "Like fs.createWriteStream, but it will create the needed directories before trying to create the file.",
   "keywords": [
-    'fs',
-    'createWriteStream',
-    'create',
-    'write',
-    'stream',
-    'mkdir',
-    'directories'
-    'path'
+    "fs",
+    "createWriteStream",
+    "create",
+    "write",
+    "stream",
+    "mkdir",
+    "directories",
+    "path"
   ],
   "main": "index.js",
   "scripts": {
