@@ -20,4 +20,4 @@ fs.createReadStream('file.txt')
 
 ### Parameters
 
-See the [fs.createWriteStream docs](https://nodejs.org/api/fs.html#fs_fs_createwritestream_path_options)
+See the [fs.createWriteStream docs](https://nodejs.org/api/fs.html#fs_fs_createwritestream_path_options).
