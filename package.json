@@ -1,6 +1,6 @@
 {
   "name": "safe-write-stream",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Like fs.createWriteStream, but it will create the needed directories before trying to create the file.",
   "keywords": [
     "fs",
@@ -12,6 +12,10 @@
     "directories",
     "path"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m59peacemaker/node-safe-write-stream"
+  },
   "main": "index.js",
   "scripts": {
     "test": "tape test/**/*.js"
