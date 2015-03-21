@@ -20,13 +20,7 @@ module.exports = function(filepath) {
 function hijackEmit(stream, fsDone) {
   var oldEmit = stream.emit;
   stream.emit = function(type) {
-    var args = arguments;
-    if (type === 'finish') {
-      fsDone.then(function() {
-        oldEmit.apply(stream, args);
-      });
-    } else {
-      oldEmit.apply(stream, args);
-    }
+    var emit = Function.bind.apply(oldEmit, [stream].concat([].slice.call(arguments)));
+    type === 'finish' ? fsDone.then(emit) : emit();
   };
 }
