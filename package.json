@@ -1,6 +1,6 @@
 {
   "name": "safe-write-stream",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Like fs.createWriteStream, but it will create the needed directories before trying to create the file.",
   "keywords": [
     "fs",

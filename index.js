@@ -5,20 +5,15 @@ var PT       = require('stream').PassThrough;
 
 module.exports = function(filepath) {
   var args = arguments;
-  var dirsCreated = new Promise(function(resolve, reject) {
-    mkdirp(path.dirname(filepath), resolve);
-  });
-  var fsDoneResolve;
-  var fsDone = new Promise(function(resolve, reject) {
-    fsDoneResolve = resolve;
-  });
   var stream = new PT();
   stream.pause();
-  hijackEmit(stream, fsDone);
-  dirsCreated.then(function() {
-    stream.pipe(fs.createWriteStream.apply(fs, args)).on('finish', fsDoneResolve);
-    stream.resume();
+  var fsDone = new Promise(function(resolve, reject) {
+    mkdirp(path.dirname(filepath), function() {
+      stream.pipe(fs.createWriteStream.apply(fs, args)).on('finish', resolve);
+      stream.resume();
+    });
   });
+  hijackEmit(stream, fsDone);
   return stream;
 };
 
