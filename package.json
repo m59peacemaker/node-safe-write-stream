@@ -17,8 +17,8 @@
     "test": "tape test/**/*.js"
   },
   "author": {
-    "name" : "Johnny Hauser",
-    "email" : "johnnyhauser@gmail.com"
+    "name": "Johnny Hauser",
+    "email": "johnnyhauser@gmail.com"
   },
   "license": "MIT",
   "devDependencies": {
@@ -26,7 +26,6 @@
     "tape": "^3.5.0"
   },
   "dependencies": {
-    "mkdirp": "^0.5.0",
-    "through2": "^0.6.3"
+    "mkdirp": "^0.5.0"
   }
 }

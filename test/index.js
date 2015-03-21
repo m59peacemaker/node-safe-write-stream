@@ -10,11 +10,11 @@ test('creates directories for file and writes it', function(t) {
   var file = __dirname+'/test.txt';
   var dest = tmp+'/foo/bar/baz.txt';
   fs.createReadStream(file)
-    .pipe(safeWriteStream(dest))
+    .pipe(new safeWriteStream(dest))
     .on('finish', function() {
       fs.stat(dest, function(err, stats) {
         rimraf(tmp, function() {
-          t.true(true);
+          t.false(err);
         });
       });
     });
