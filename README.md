@@ -1,4 +1,4 @@
-# safe-write-stream
+# Safe Write Stream
 
 Like `fs.createWriteStream`, but it will create the needed directories before trying to create the file.
 
@@ -10,12 +10,10 @@ npm install safe-write-stream
 ## Usage
 
 ```javascript
-var safeWriteStream = require('safeWriteStream');
+var safeWriteStream = require('safe-write-stream');
 
 fs.createReadStream('file.txt')
   .pipe(safeWriteStream(__dirname+'/these/will/be/created/file.txt'))
-;
-});
 ```
 
 ### Parameters
