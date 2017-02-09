@@ -1,6 +1,6 @@
 {
   "name": "safe-write-stream",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Like fs.createWriteStream, but it will create the needed directories before trying to create the file.",
   "keywords": [
     "fs",
@@ -24,7 +24,7 @@
     "name": "Johnny Hauser",
     "email": "johnnyhauser@gmail.com"
   },
-  "license": "MIT",
+  "license": "CC0-1.0",
   "devDependencies": {
     "rimraf": "^2.3.2",
     "tape": "^3.5.0"
